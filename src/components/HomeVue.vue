@@ -73,6 +73,7 @@ export default {
     },
     searchDetails(event) {
       event.preventDefault();
+      if(this.search.trim())
       this.$router.push("/" + this.search);
     },
   },

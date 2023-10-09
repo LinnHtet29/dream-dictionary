@@ -16,6 +16,14 @@
           class="mx-auto max-w-screen-lg text-center lg:py-32 scrolling-touch details-con"
         >
           <article
+            v-if="details.length === 0"
+            class="shadow-lg bg-white text-black w-full rounded-2xl my-3 px-5 mx-auto"
+          >
+            <div class="px-6 py-4">
+              <p class="text-base text-dark">ကိုက်ညီသောရလဒ် မတွေ့ရှိပါ။</p>
+            </div>
+          </article>
+          <article
             v-for="(detail, index) in details"
             :key="index"
             class="shadow-lg bg-white text-black w-full rounded-2xl my-3 px-5 mx-auto"
