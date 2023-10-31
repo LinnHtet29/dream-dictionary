@@ -6,7 +6,7 @@ import axios from "axios";
 
 Vue.config.productionTip = false;
 
-axios.defaults.baseURL = "http://localhost:3000";
+axios.defaults.baseURL = "https://dream-dictionary-api.onrender.com";
 
 Vue.use(VueRouter);
 const router = new VueRouter({
