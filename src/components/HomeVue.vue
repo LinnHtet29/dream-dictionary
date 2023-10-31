@@ -1,11 +1,11 @@
 <template>
   <div class="bg-white main-con">
-    <div class="mx-auto max-w-7xl py-24 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl py-0 md:py-10 sm:px-3 lg:px-8">
       <div
-        class="relative isolate overflow-hidden bg-gray-900 px-6 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
+        class="relative isolate overflow-hidden bg-gray-900 px-2 shadow-2xl sm:rounded-3xl sm:px-10 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
       >
         <div
-          class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left"
+          class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left md:p-5 sm:p-10 p-5"
         >
           <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             အိပ်မက်အဘိဓာန်
@@ -29,7 +29,7 @@
             </form>
           </div>
         </div>
-        <div class="relative mt-16 h-80 lg:mt-8 right-con">
+        <div class="relative mt-16 h-80 lg:mt-8 right-con flex flex-col justify-center items-center">
           <h3 class="text-white text-center mb-5">
             အက္ခရာအလိုက် အိပ်မက်များကို ကြည့်ရှ့ရန်ရွေးချယ်ပါ။
           </h3>
@@ -53,7 +53,7 @@
               :key="index"
               class="light-fade card bg-white hover:bg-gray-200 active:bg-gray-400 focus:outline-none"
             >
-              <h3 class="text-center text-gray-900 text-2xl">
+              <h3 class="text-center text-gray-900 text-md sm:text-md md:text-2xl">
                 {{ header.BlogTitle.substring(2, 4) }}
               </h3>
             </button>
@@ -196,4 +196,32 @@ export default {
         transform: rotate( 360deg );
       }
     }
+
+  @media only screen and (max-width: 600px) {
+    .card {
+      min-width: 60px;
+      min-height: 45px;
+      border-radius: 10px;
+    }
+
+    .right-con {
+      max-width: 100%;
+      min-width: 100%;
+      padding-bottom: 20px;
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .card {
+      min-width: 70px;
+      min-height: 45px;
+      border-radius: 10px;
+    }
+
+    .right-con {
+      max-width: 400px;
+      min-width: 400px;
+      padding-bottom: 20px;
+      margin: auto;
+    }
+  }
 </style>
