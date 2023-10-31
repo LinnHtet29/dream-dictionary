@@ -29,7 +29,7 @@
               </div>
           </article>
           <article
-            v-if="isNotFound"
+            v-if="details.length === 0 && isNotFound"
             class="shadow-lg bg-white text-black w-full rounded-2xl my-3 px-5 mx-auto"
           >
             <div class="px-6 py-4">
