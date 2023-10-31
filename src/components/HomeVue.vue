@@ -196,20 +196,6 @@ export default {
         transform: rotate( 360deg );
       }
     }
-
-  @media only screen and (max-width: 600px) {
-    .card {
-      min-width: 60px;
-      min-height: 45px;
-      border-radius: 10px;
-    }
-
-    .right-con {
-      max-width: 100%;
-      min-width: 100%;
-      padding-bottom: 20px;
-    }
-  }
   @media only screen and (max-width: 1024px) {
     .card {
       min-width: 70px;
@@ -222,6 +208,19 @@ export default {
       min-width: 400px;
       padding-bottom: 20px;
       margin: auto;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .card {
+      min-width: 60px;
+      min-height: 45px;
+      border-radius: 10px;
+    }
+
+    .right-con {
+      max-width: 100%;
+      min-width: 100%;
+      padding-bottom: 20px;
     }
   }
 </style>

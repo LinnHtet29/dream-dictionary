@@ -7,13 +7,13 @@
         နောက်သို့
       </button>
     </router-link>
-    <div class="mx-auto max-w-7xl py-24 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl py-0 sm:pt-5 md:pt-24 sm:px-6 lg:px-8 sticky-top top-20">
       <div
         class="relative isolate overflow-hidden bg-gray-900 px-6 py-10 shadow-2xl sm:rounded-3xl sm:px-16 lg:flex lg:gap-x-20 lg:px-24"
-        style="min-height: 500px"
+        style="min-height: 500px;"
       >
         <section
-          class="mx-auto max-w-screen-lg text-center lg:py-32 scrolling-touch details-con"
+          class="mx-auto max-w-screen-lg text-center py-10 sm:py-20 lg:py-32 scrolling-touch details-con"
         >
           <article v-if="details.length === 0 && !isNotFound" class="flex justify-center min-w-full">
               <div class="fingerprint-spinner">
@@ -86,6 +86,9 @@ export default {
 </script>
 
 <style scoped>
+#body-con {
+        overflow: hidden;
+      }
 .main-con {
   overflow: hidden;
   scroll-behavior: smooth;
@@ -201,5 +204,38 @@ article:hover {
       100% {
         transform: rotate( 360deg );
       }
+    }
+
+    @media only screen and (max-width: 982px) {
+      .main-con {
+  overflow: hidden;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+section {
+  margin-top: 50px;
+  max-height: auto;
+  overflow-y: auto;
+  min-width: auto;
+}
+.details-con {
+  max-height: 100vh;
+}
+article {
+  max-width: 700px;
+  transition: transform ease-in-out 0.3s;
+}
+article:hover {
+  transform: scale(1.1);
+}
+.back-btn {
+  position: fixed;
+  padding: 10px 15px;
+  background: white;
+  top: 20px;
+  z-index: 999;
+  left: 15px;
+  border-radius: 10px;
+}
     }
 </style>
